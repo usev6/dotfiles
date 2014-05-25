@@ -1,0 +1,27 @@
+#!/bin/bash
+
+## deploy dotfiles from git repository
+## * backup existing configuration files from ~
+## * create symbolic links in ~ to configuration files in ~/dotfiles
+
+DOTFILE_DIR=~/dotfiles
+BACKUP_DIR=~/dotfiles_old
+DOTFILE_LIST=".vim .vimrc"
+
+## backup dir for old dotfiles
+mkdir -p $BACKUP_DIR
+timestamp=$(date +%Y-%m-%dT%H:%M:%S)
+
+echo
+echo deploying dotfiles
+echo
+for dotfile in $DOTFILE_LIST; do
+    echo "* $dotfile"
+    if [ ! -e $DOTFILE_DIR/$dotfile ]; then
+        echo "  -> ERROR: file $DOTFILE_DIR/$dotfile does not exist"
+        continue
+    fi
+    mv ~/$dotfile $BACKUP_DIR/$dotfile.$timestamp
+    ln -s $DOTFILE_DIR/$dotfile ~/
+    echo "  -> OK "
+done
