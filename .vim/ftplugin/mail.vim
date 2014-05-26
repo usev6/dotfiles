@@ -16,4 +16,6 @@ set comments+=n:\|
 
 "" specific configuration for mutt
 "" (mappings for signatures etc.)
-source ~/.mutt/vimrc.mutt
+if filereadable(glob("~/.mutt/vimrc.mutt"))
+    source ~/.mutt/vimrc.mutt
+endif
