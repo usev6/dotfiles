@@ -16,3 +16,8 @@ filetype indent on
 set grepprg=grep\ -nH\ $*
 
 set bs=2
+
+"" include specific configuration for this machine (if present)
+if filereadable(glob("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
