@@ -1,0 +1,13 @@
+set editing-mode vi
+
+## introduced with bash 4.3 and readline 6.3
+set show-mode-in-prompt on
+
+# keymaps for command mode
+set keymap vi-command
+"\e.": yank-last-arg
+
+# keymaps for insert mode
+set keymap vi-insert
+"\C-l": clear-screen
+"\e.": yank-last-arg
