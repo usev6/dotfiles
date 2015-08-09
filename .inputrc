@@ -5,9 +5,13 @@ set show-mode-in-prompt on
 
 # keymaps for command mode
 set keymap vi-command
+"\C-p": history-search-backward
+"\C-n": history-search-forward
 "\e.": yank-last-arg
 
 # keymaps for insert mode
 set keymap vi-insert
 "\C-l": clear-screen
+"\C-p": history-search-backward
+"\C-n": history-search-forward
 "\e.": yank-last-arg
