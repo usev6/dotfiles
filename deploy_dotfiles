@@ -6,7 +6,7 @@
 
 DOTFILE_DIR=~/dotfiles
 BACKUP_DIR=~/dotfiles_old
-DOTFILE_LIST=".vim .vimrc"
+DOTFILE_LIST=".vim .vimrc .inputrc"
 
 ## backup dir for old dotfiles
 mkdir -p $BACKUP_DIR
