@@ -6,7 +6,6 @@ set wrap
 "" see fo-table
 set formatoptions=tcrq2
 
-set nomodeline
 "" otherwise keymapping stops to read after one second
 set notimeout
 "" TODO perhaps not necessary?
