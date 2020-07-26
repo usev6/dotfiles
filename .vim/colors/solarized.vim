@@ -806,6 +806,10 @@ exe "hi! rubyDefine"     . s:fg_base0  .s:bg_back   .s:fmt_none
 "hi! link rubyClassVariable     Identifier
 "hi! link rubyConstant          Type
 "}}}
+" eruby highlighting (embedded ruby, .erb) "{{{
+" ---------------------------------------------------------------------
+exe "hi! erubyDelimiter"     . s:fg_base2  .s:bg_back   .s:fmt_none
+"}}}
 " haskell syntax highlighting"{{{
 " ---------------------------------------------------------------------
 " For use with syntax/haskell.vim : Haskell Syntax File
