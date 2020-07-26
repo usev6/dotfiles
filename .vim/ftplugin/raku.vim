@@ -12,5 +12,5 @@ call matchadd('ColorColumn', '\%81v', 100)
 exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
 set list
 
-"" <F3> runs the perl6 interpreter on the current buffer
-map <f3> <Esc>:! perl6 %<CR>
+"" <F3> runs the raku interpreter on the current buffer
+map <f3> <Esc>:! raku %<CR>
