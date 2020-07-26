@@ -16,8 +16,5 @@ set list
 "" <F3> runs the perl interpreter on the current buffer
 map <f3> <Esc>:! perl %<CR>
 
-"" <F4> runs the perl6 interpreter on the current buffer
-map <f4> <Esc>:! perl6 %<CR>
-
 "" read templates for perl programs
 map ,TEMP :r ~/my_files/computer/Perl/code_templates/
