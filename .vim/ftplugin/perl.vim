@@ -3,6 +3,12 @@ let &tabstop=indent
 let &shiftwidth=indent
 set expandtab
 
+"" requires Perl::Critic
+let g:syntastic_enable_perl_checker = 1
+let g:syntastic_perl_checkers = ['perl', 'podchecker', 'perlcritic']
+"" disable syntastic
+"autocmd VimEnter * SyntasticToggleMode
+
 "" colored warning for lines exceeding 80 characters
 "" borrowed from Damian Conway
 highlight ColorColumn ctermbg=magenta
