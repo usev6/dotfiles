@@ -15,3 +15,6 @@ set list
 
 "" <F3> runs the raku interpreter on the current buffer
 map <f3> <Esc>:! raku %<CR>
+
+"" TODO temporarily disable syntax highlighting (can be very slow)
+set syntax=off
