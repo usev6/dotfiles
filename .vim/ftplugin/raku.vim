@@ -1,6 +1,6 @@
 "" use variable 'indent' from ~/.vimrc (maybe overwritten in ~/.vimrc.local)
 let &tabstop=indent
-set &shiftwidth=indent
+let &shiftwidth=indent
 set expandtab
 
 "" colored warning for lines exceeding 80 characters
