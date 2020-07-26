@@ -24,3 +24,18 @@ set bs=2
 if filereadable(glob("~/.vimrc.local"))
     source ~/.vimrc.local
 endif
+
+"" enable syntastic via pathogen
+"" https://github.com/vim-syntastic/syntastic
+execute pathogen#infect()
+
+"" settings for syntastic
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_ruby_checkers = ['rubocop']
