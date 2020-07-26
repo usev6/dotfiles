@@ -541,7 +541,7 @@ exe "hi! Normal"         .s:fmt_none   .s:fg_base0  .s:bg_back
 exe "hi! Comment"        .s:fmt_ital   .s:fg_base01 .s:bg_none
 "       *Comment         any comment
 
-exe "hi! Constant"       .s:fmt_none   .s:fg_cyan   .s:bg_none
+exe "hi! Constant"       .s:fmt_none   .s:fg_base0  .s:bg_none
 "       *Constant        any constant
 "        String          a string constant: "this is a string"
 "        Character       a character constant: 'c', '\n'
@@ -549,11 +549,11 @@ exe "hi! Constant"       .s:fmt_none   .s:fg_cyan   .s:bg_none
 "        Boolean         a boolean constant: TRUE, false
 "        Float           a floating point constant: 2.3e10
 
-exe "hi! Identifier"     .s:fmt_none   .s:fg_blue   .s:bg_none
+exe "hi! Identifier"     .s:fmt_none   .s:fg_base0   .s:bg_none
 "       *Identifier      any variable name
 "        Function        function name (also: methods for classes)
 "
-exe "hi! Statement"      .s:fmt_none   .s:fg_green  .s:bg_none
+exe "hi! Statement"      .s:fmt_none   .s:fg_base0  .s:bg_none
 "       *Statement       any statement
 "        Conditional     if, then, else, endif, switch, etc.
 "        Repeat          for, do, while, etc.
@@ -562,20 +562,20 @@ exe "hi! Statement"      .s:fmt_none   .s:fg_green  .s:bg_none
 "        Keyword         any other keyword
 "        Exception       try, catch, throw
 
-exe "hi! PreProc"        .s:fmt_none   .s:fg_orange .s:bg_none
+exe "hi! PreProc"        .s:fmt_none   .s:fg_base0 .s:bg_none
 "       *PreProc         generic Preprocessor
 "        Include         preprocessor #include
 "        Define          preprocessor #define
 "        Macro           same as Define
 "        PreCondit       preprocessor #if, #else, #endif, etc.
 
-exe "hi! Type"           .s:fmt_none   .s:fg_yellow .s:bg_none
+exe "hi! Type"           .s:fmt_none   .s:fg_base0 .s:bg_none
 "       *Type            int, long, char, etc.
 "        StorageClass    static, register, volatile, etc.
 "        Structure       struct, union, enum, etc.
 "        Typedef         A typedef
 
-exe "hi! Special"        .s:fmt_none   .s:fg_red    .s:bg_none
+exe "hi! Special"        .s:fmt_none   .s:fg_base0    .s:bg_none
 "       *Special         any special symbol
 "        SpecialChar     special character in a constant
 "        Tag             you can use CTRL-] on this
@@ -583,10 +583,10 @@ exe "hi! Special"        .s:fmt_none   .s:fg_red    .s:bg_none
 "        SpecialComment  special things inside a comment
 "        Debug           debugging statements
 
-exe "hi! Underlined"     .s:fmt_none   .s:fg_violet .s:bg_none
+exe "hi! Underlined"     .s:fmt_none   .s:fg_base0 .s:bg_none
 "       *Underlined      text that stands out, HTML links
 
-exe "hi! Ignore"         .s:fmt_none   .s:fg_none   .s:bg_none
+exe "hi! Ignore"         .s:fmt_none   .s:fg_base0   .s:bg_none
 "       *Ignore          left blank, hidden  |hl-Ignore|
 
 exe "hi! Error"          .s:fmt_bold   .s:fg_red    .s:bg_none
@@ -606,7 +606,7 @@ elseif  (g:solarized_visibility=="low")
     exe "hi! SpecialKey" .s:fmt_bold   .s:fg_base02 .s:bg_none
     exe "hi! NonText"    .s:fmt_bold   .s:fg_base02 .s:bg_none
 else
-    exe "hi! SpecialKey" .s:fmt_bold   .s:fg_base00 .s:bg_base02
+    exe "hi! SpecialKey" .s:fmt_none   .s:fg_base00 .s:bg_none
     exe "hi! NonText"    .s:fmt_bold   .s:fg_base00 .s:bg_none
 endif
 exe "hi! StatusLine"     .s:fmt_none   .s:fg_base1  .s:bg_base02 .s:fmt_revbb
@@ -759,19 +759,19 @@ hi! link gitcommitUnmergedArrow  gitcommitUnmergedFile
 " }}}
 " html highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! htmlTag"           .s:fmt_none .s:fg_base01 .s:bg_none
-exe "hi! htmlEndTag"        .s:fmt_none .s:fg_base01 .s:bg_none
-exe "hi! htmlTagN"          .s:fmt_bold .s:fg_base1  .s:bg_none
-exe "hi! htmlTagName"       .s:fmt_bold .s:fg_blue   .s:bg_none
-exe "hi! htmlSpecialTagName".s:fmt_ital .s:fg_blue   .s:bg_none
-exe "hi! htmlArg"           .s:fmt_none .s:fg_base00 .s:bg_none
-exe "hi! javaScript"        .s:fmt_none .s:fg_yellow .s:bg_none
+exe "hi! htmlTag"           .s:fmt_none .s:fg_base0  .s:bg_none
+exe "hi! htmlEndTag"        .s:fmt_none .s:fg_base0  .s:bg_none
+exe "hi! htmlTagN"          .s:fmt_none .s:fg_base0  .s:bg_none
+exe "hi! htmlTagName"       .s:fmt_none .s:fg_base0   .s:bg_none
+exe "hi! htmlSpecialTagName".s:fmt_none .s:fg_base0   .s:bg_none
+exe "hi! htmlArg"           .s:fmt_none .s:fg_base0 .s:bg_none
+exe "hi! javaScript"        .s:fmt_none .s:fg_base0 .s:bg_none
 "}}}
 " perl highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
-exe "hi! perlVarPlain"   . s:fg_yellow .s:bg_back   .s:fmt_none
-exe "hi! perlStatementFileDesc". s:fg_cyan.s:bg_back.s:fmt_none
+exe "hi! perlHereDoc"    . s:fg_base0  .s:bg_back   .s:fmt_none
+exe "hi! perlVarPlain"   . s:fg_base0 .s:bg_back   .s:fmt_none
+exe "hi! perlStatementFileDesc". s:base0 .s:bg_back .s:fmt_none
 
 "}}}
 " tex highlighting "{{{
@@ -784,7 +784,7 @@ exe "hi! texRefLabel"    . s:fg_yellow .s:bg_back   .s:fmt_none
 "}}}
 " ruby highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! rubyDefine"     . s:fg_base1  .s:bg_back   .s:fmt_bold
+exe "hi! rubyDefine"     . s:fg_base0  .s:bg_back   .s:fmt_none
 "rubyInclude
 "rubySharpBang
 "rubyAccess
