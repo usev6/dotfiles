@@ -5,6 +5,10 @@ set t_Co=16       "" 16 colors
 set background=dark
 colorscheme solarized
 
+"" play it safe
+"" https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
+set nomodeline
+
 set nocompatible
 
 filetype plugin on
