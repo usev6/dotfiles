@@ -19,3 +19,6 @@ set comments+=n:\|
 if filereadable(glob("~/.mutt/vimrc.mutt"))
     source ~/.mutt/vimrc.mutt
 endif
+
+"" use original solarized color scheme for mails
+colorscheme solarized_orig
