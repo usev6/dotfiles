@@ -1,4 +1,7 @@
 syntax enable
+
+"" colorscheme settings
+set t_Co=16       "" 16 colors
 set background=dark
 colorscheme solarized
 
