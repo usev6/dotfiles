@@ -3,8 +3,8 @@
 set textwidth=70
 set wrap
 
-"" TODO what does this do?
-set fo=tcrq2
+"" see fo-table
+set formatoptions=tcrq2
 
 set nomodeline
 "" otherwise keymapping stops to read after one second
