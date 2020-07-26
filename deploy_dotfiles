@@ -16,12 +16,12 @@ echo
 echo deploying dotfiles
 echo
 for dotfile in $DOTFILE_LIST; do
-    echo "* $dotfile"
-    if [ ! -e $DOTFILE_DIR/$dotfile ]; then
+    echo "* ${dotfile}"
+    if [ ! -e "${DOTFILE_DIR}/${dotfile}" ]; then
         echo "  -> ERROR: file $DOTFILE_DIR/$dotfile does not exist"
         continue
     fi
-    mv ~/$dotfile $BACKUP_DIR/$dotfile.$timestamp
-    ln -s $DOTFILE_DIR/$dotfile ~/
-    echo "  -> OK "
+    mv ~/"${dotfile}" "${BACKUP_DIR}/${dotfile}.${timestamp}"
+    ln -s "${DOTFILE_DIR}/${dotfile}" ~/
+    echo '  -> OK '
 done
