@@ -16,6 +16,8 @@ filetype plugin on
 " au BufNewFile,BufRead /tmp/mutt* set ft=mail
 
 filetype indent on
+"" default indent -- can be overwritten in ~/.vimrc.local
+let indent=4
 
 "" IMPORTANT: grep will sometimes skip displaying the file name if you
 "" search in a single file. This will confuse latex-suite. Set your grep
