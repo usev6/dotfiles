@@ -1,0 +1,2 @@
+## use a login shell -- that's what we need for rvm
+shell -${SHELL}
