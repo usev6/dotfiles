@@ -2,7 +2,14 @@
 ## we don't manage ~/.bashrc itself, because there might be other
 ## programs that mess with it
 
-## TODO tweak bash history
+## tweak bash history
+HISTSIZE=50000
+HISTFILESIZE=100000
+HISTTIMEFORMAT='%F %T '
+
+## set EDITOR
+export VISUAL=vim
+export EDITOR=$VISUAL
 
 ## include specific configuration for this machine (if any)
 [[ -f ~/.bashrc_local ]] && source ~/.bashrc_local
